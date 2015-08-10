@@ -1,43 +1,85 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+*.tar.gz
 
-# Folder config file
-Desktop.ini
+*.exe
+src/bitcoin
+src/bitcoind
+src/bitcoin-cli
+src/test/test_bitcoin
+src/qt/test/test_bitcoin-qt
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+configure
+src/bitcoin-config.h
+src/bitcoin-config.h.in
+src/build-aux/
+src/stamp-h1
+share/setup.nsi
+share/qt/Info.plist
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+src/qt/*.moc
+src/qt/moc_*.cpp
+src/qt/forms/ui_*.h
 
-# Windows shortcuts
-*.lnk
+src/qt/test/moc*.cpp
 
-# =========================
-# Operating System Files
-# =========================
+.deps
+.dirstamp
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.o-*
+*.patch
+.bitcoin
+*.a
+*.pb.cc
+*.pb.h
 
-# OSX
-# =========================
+*.log
+*.trs
+*.dmg
 
+*.json.h
+*.raw.h
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+bitcoin-qt
+Bitcoin-Qt.app
+
+# Unit-tests
+Makefile.test
+bitcoin-qt_test
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
 .DS_Store
-.AppleDouble
-.LSOverride
+build
 
-# Thumbnails
-._*
+#lcov
+*.gcno
+/*.info
+test_bitcoin.coverage/
+total.coverage/
+coverage_percent.txt
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+#build tests
+linux-coverage-build
+linux-build
+win32-build
+qa/pull-tester/run-bitcoind-for-test.sh
+qa/pull-tester/build-tests.sh
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+!src/leveldb*/Makefile
